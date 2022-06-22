@@ -9,7 +9,7 @@ local M = {}
 M.general = {
 
    i = {
-
+      ["jk"] = { "<ESC>", "Escape Insert Mode"},
       -- go to  beginning and end
       ["<C-b>"] = { "<ESC>^i", "論 beginning of line" },
       ["<C-e>"] = { "<End>", "壟 end of line" },
