@@ -64,7 +64,7 @@ lspconfig.sumneko_lua.setup {
   },
 }
 
-local lsp_servers = { "rust_analyzer", "tsserver", "pyright", "html", "cssls" }
+local lsp_servers = { "rust_analyzer", "tsserver", "pylsp", "html", "cssls" }
 
 for _, lsp_server in ipairs(lsp_servers) do
   lspconfig[lsp_server].setup {
