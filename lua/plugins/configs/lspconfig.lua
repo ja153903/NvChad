@@ -67,10 +67,10 @@ lspconfig.sumneko_lua.setup {
 local lsp_servers = { "rust_analyzer", "tsserver", "pyright", "html", "cssls" }
 
 for _, lsp_server in ipairs(lsp_servers) do
-  lspconfig[lsp_server].setup {
-    on_attach = M.on_attach,
-    capabilities = capabilities,
-  }
+   lspconfig[lsp_server].setup {
+      on_attach = M.on_attach,
+      capabilities = capabilities,
+   }
 end
 
 -- requires a file containing user's lspconfigs
