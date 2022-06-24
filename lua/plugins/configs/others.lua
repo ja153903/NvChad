@@ -31,6 +31,10 @@ M.blankline = function()
 
    require("base46").load_highlight "blankline"
 
+   vim.opt.list = true
+   vim.opt.listchars:append "space:⋅"
+   vim.opt.listchars:append "eol:↴"
+
    local options = {
       indentLine_enabled = 1,
       char = "▏",
@@ -50,6 +54,8 @@ M.blankline = function()
       show_first_indent_level = false,
       show_current_context = true,
       show_current_context_start = true,
+      show_end_of_line = true,
+      space_char_blankline = " ",
    }
 
    options = load_override(options, "lukas-reineke/indent-blankline.nvim")
