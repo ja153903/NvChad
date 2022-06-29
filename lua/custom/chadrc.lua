@@ -7,7 +7,7 @@ M.ui = {
 }
 
 M.plugins = {
-  install = plugins,
+   user = plugins,
 }
 
 return M
