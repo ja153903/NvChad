@@ -2,10 +2,9 @@ local null_ls = require "null-ls"
 local b = null_ls.builtins
 
 local sources = {
-   b.formatting.prettierd.with {
+   b.formatting.prettier.with {
       filetypes = { "html", "markdown", "css", "javascript", "javascriptreact", "typescript", "typescriptreact" },
    },
-   b.formatting.deno_fmt,
    b.formatting.rustfmt.with { extra_args = { "--edition=2021" } },
    b.formatting.autopep8,
 
