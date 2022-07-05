@@ -64,7 +64,19 @@ lspconfig.sumneko_lua.setup {
    },
 }
 
-local lsp_servers = { "rust_analyzer", "tsserver", "pyright", "html", "cssls" }
+if lspconfig.util.root_pattern "deno.json" "." then
+   lspconfig.denols.setup {
+      on_attach = M.on_attach,
+      capabilities = capabilities,
+   }
+else
+   lspconfig.tsserver.setup {
+      on_attach = M.on_attach,
+      capabilities = capabilities,
+   }
+end
+
+local lsp_servers = { "rust_analyzer", "pyright", "html", "cssls" }
 
 for _, lsp_server in ipairs(lsp_servers) do
    lspconfig[lsp_server].setup {

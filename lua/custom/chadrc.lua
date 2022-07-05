@@ -3,7 +3,7 @@ local M = {}
 local plugins = require "custom.plugins"
 
 M.ui = {
-   theme = "tokyonight",
+   theme = "gatekeeper",
 }
 
 M.plugins = {
